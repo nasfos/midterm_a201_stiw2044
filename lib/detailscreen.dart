@@ -56,62 +56,131 @@ class _DetailScreenState extends State<DetailScreen> {
                 SizedBox(height: 5),
                 Text(widget.book.description),
                 Divider(color: Colors.grey),
-                Container(
-                  child: DataTable(
-                    columns: const <DataColumn>[
-                      DataColumn(
-                        label: Text(
-                          'Type',
-                          style: TextStyle(fontStyle: FontStyle.italic),
-                        ),
-                      ),
-                      DataColumn(
-                        label: Text(
-                          'Details',
-                          style: TextStyle(fontStyle: FontStyle.italic),
-                        ),
-                      ),
-                    ],
-                    rows: <DataRow>[
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text("Book Title")),
-                          DataCell(Text(widget.book.booktitle)),
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text("Author")),
-                          DataCell(Text(widget.book.author)),
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text("Price")),
-                          DataCell(Text("RM " + widget.book.price)),
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text("ISBN")),
-                          DataCell(Text(widget.book.isbn)),
-                        ],
-                      ),
-                      DataRow(
-                        cells: <DataCell>[
-                          DataCell(Text("Publisher")),
-                          DataCell(Text(widget.book.publisher)),
-                        ],
-                      ),
-                      // DataRow(
-                      //   cells: <DataCell>[
-                      //     DataCell(Text("Description")),
-                      //     DataCell(Text(widget.book.description)),
-                      //   ],
-                      // ),
-                    ],
-                  ),
-                )
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 5.0, 20.0, 5.0),
+                      child:Text("Book Title",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ))
+                    ),
+                    Container(
+                      child:Text(widget.book.booktitle)
+                    ),
+                  ],
+                ),
+                Divider(color: Colors.grey),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 5.0, 42.0, 5.0),
+                      child:Text("Author",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ))
+                    ),
+                    Container(
+                      child:Text(widget.book.author)
+                    ),
+                  ],
+                ),
+                Divider(color: Colors.grey),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 5.0, 53.0, 5.0),
+                      child:Text("Price",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ))
+                    ),
+                    Container(
+                      child:Text("RM"+widget.book.price)
+                    ),
+                  ],
+                ),
+                Divider(color: Colors.grey),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 5.0, 54.0, 5.0),
+                      child:Text("ISBN",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ))
+                    ),
+                    Container(
+                      child:Text(widget.book.isbn)
+                    ),
+                  ],
+                ),
+                Divider(color: Colors.grey),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 5.0, 25.0, 5.0),
+                      child:Text("Publisher",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ))
+                    ),
+                    Container(
+                      child:Text(widget.book.publisher)
+                    ),
+                  ],
+                ),
+                // Container(
+                //   child: DataTable(
+                //     columns: const <DataColumn>[
+                //       DataColumn(
+                //         label: Text(
+                //           'Type',
+                //           style: TextStyle(fontStyle: FontStyle.italic),
+                //         ),
+                //       ),
+                //       DataColumn(
+                //         label: Text(
+                //           'Details',
+                //           style: TextStyle(fontStyle: FontStyle.italic),
+                //         ),
+                //       ),
+                //     ],
+                //     rows: <DataRow>[
+                //       DataRow(
+                //         cells: <DataCell>[
+                //           DataCell(Text("Book Title")),
+                //           DataCell(Text(widget.book.booktitle)),
+                //         ],
+                //       ),
+                //       DataRow(
+                //         cells: <DataCell>[
+                //           DataCell(Text("Author")),
+                //           DataCell(Text(widget.book.author)),
+                //         ],
+                //       ),
+                //       DataRow(
+                //         cells: <DataCell>[
+                //           DataCell(Text("Price")),
+                //           DataCell(Text("RM " + widget.book.price)),
+                //         ],
+                //       ),
+                //       DataRow(
+                //         cells: <DataCell>[
+                //           DataCell(Text("ISBN")),
+                //           DataCell(Text(widget.book.isbn)),
+                //         ],
+                //       ),
+                //       DataRow(
+                //         cells: <DataCell>[
+                //           DataCell(Text("Publisher")),
+                //           DataCell(Text(widget.book.publisher)),
+                //         ],
+                //       ),
+                //       // DataRow(
+                //       //   cells: <DataCell>[
+                //       //     DataCell(Text("Description")),
+                //       //     DataCell(Text(widget.book.description)),
+                //       //   ],
+                //       // ),
+                //     ],
+                //   ),
+                // )
               ],
             ),
           ),
